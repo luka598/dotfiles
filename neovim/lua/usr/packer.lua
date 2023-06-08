@@ -63,6 +63,9 @@ run.main = {
 				use(p)
 			end
 		end)
+		if (vim.env.NVIM_INSTALL) then 
+			require('packer').sync()
+		end
 		return true;
 	end
 }
