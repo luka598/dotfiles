@@ -3,12 +3,13 @@ local run = require("usr/run")
 local r = run:new({
 	-- Init
 	run.M(require("usr/vim-opt").run.init),
-	run.M(require("usr/packer").run.init),
 	run.M(require("usr/fold").run.init),
+	run.M(require("usr/whichkey").run.init),
+	run.M(require("usr/packer").run.init),
 	
 	-- Packer
 	run.M(require("usr/packer").run.packer),
-	run.M(require("usr/whichkey").run.init),
+	run.M(require("usr/whichkey").run.packer),
 	run.M(require("usr/comment").packer),
 	run.M(require("usr/nvimtree").packer),
 	run.M(require("usr/lsp").packer),
@@ -16,6 +17,10 @@ local r = run:new({
 	run.M(require("usr/polyglot").run.packer),
 	run.M(require("usr/undotree").run.packer),
 	run.M(require("usr/barbar").run.packer),
+	run.M(require("usr/gruvbox").run.packer),
+	run.M(require("usr/autopairs").run.packer),
+	run.M(require("usr/indent-blankline").run.packer),
+	run.M(require("usr/treesitter").run.packer),
 
 	-- Main
 	run.M(require("usr/packer").run.main),
@@ -23,8 +28,11 @@ local r = run:new({
 	run.M(require("usr/cmp").main),
 	run.M(require("usr/lsp").main),
 	run.M(require("usr/nvimtree").main),
-	run.M(require("usr/colorscheme")),
+	run.M(require("usr/gruvbox").run.main),
 	run.M(require("usr/barbar").run.main),
+	run.M(require("usr/autopairs").run.main),
+	run.M(require("usr/indent-blankline").run.main),
+	run.M(require("usr/treesitter").run.main),
 
 	-- Keymaps
 	run.M(require("usr/vim-opt").run.keymap),

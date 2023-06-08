@@ -27,7 +27,7 @@ run.init = {
 	name = "init",
 	f = function(ctx)
 		if ctx:getRet(namespace, "init") then
-			log.error("Namespace %s is already taken!", namespace)
+			log.error(string.format("Namespace %s is already taken!", namespace))
 		end
 		local vim = vim
 		local fn = vim.fn

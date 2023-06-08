@@ -51,8 +51,8 @@ run.init = {
 	ns = namespace,
 	name = "init",
 	f = function(ctx)
-		vim.o.timeout = true
-		vim.o.timeoutlen = 500
+		-- vim.o.timeout = true
+		-- vim.o.timeoutlen = 500
 		ctx:setVar("which-key", "keymap", {})
 		return true
 	end
